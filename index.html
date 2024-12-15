@@ -13,53 +13,71 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="./index.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./styles/index.min.css" />
+    <title>Sweetgreen - Fresh and Seasonal Meals</title>
   </head>
   <body class="roboto-regular">
     <header>
       <nav>
-        <ul class="roboto-bold">
+        <div class="hamburger">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-menu"
+          >
+            <line x1="4" x2="20" y1="12" y2="12" />
+            <line x1="4" x2="20" y1="6" y2="6" />
+            <line x1="4" x2="20" y1="18" y2="18" />
+          </svg>
+        </div>
+        <ul class="roboto-bold openHam menu">
           <li><a href="#">OUR MENU</a></li>
           <li><a href="#">OUR MISSION</a></li>
           <li><a href="#">OUTPOST</a></li>
         </ul>
-        <h2 class="roboto-serif-bold-50">sweetgreen</h2>
-        <div class="roboto-medium">
-          <button class="">SIGN IN</button>
-          <button class="checkIn">CHECKIN</button>
+        <h1 class="roboto-serif-bold-50">sweetgreen</h1>
+        <div class="roboto-medium cta">
+          <button aria-label="Sign In">SIGN IN</button>
+          <button aria-label="Check In">CHECKIN</button>
         </div>
       </nav>
     </header>
+
     <main>
-      <!-- hero section -->
-      <section class="hero swiper">
+      <section class="hero swiper" aria-label="Featured Dishes Carousel">
         <div class="swiper-wrapper">
           <img
             src="./images/dinner.jpg"
-            alt="dinner table"
+            alt="Dinner table setting"
             class="responsive-img swiper-slide"
           />
           <img
             src="./images/dinner1.jpg"
-            alt="dinner table"
+            alt="Another dinner table setting"
             class="responsive-img swiper-slide"
           />
           <img
             src="./images/dinner2.jpg"
-            alt="dinner table"
+            alt="Dinner table with dishes"
             class="responsive-img swiper-slide"
           />
         </div>
 
-        <div class="hero-content">
+        <article class="hero-content">
           <p class="roboto-thin new-menu">New menu</p>
           <h2 class="roboto-serif-light-50">
             <p>Now serving</p>
             <p>summer</p>
           </h2>
-          <button>
-            <p>ORDER NOW</p>
+          <button aria-label="Order Now">
+            <span>ORDER NOW</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -71,14 +89,16 @@
               stroke-linecap="round"
               stroke-linejoin="round"
               class="lucide lucide-move-right"
+              aria-hidden="true"
             >
               <path d="M18 8L22 12L18 16" />
               <path d="M2 12H22" />
             </svg>
           </button>
-        </div>
-        <div class="carousel-control">
-          <button class="swipe-prev">
+        </article>
+
+        <nav class="carousel-control" aria-label="Carousel Navigation">
+          <button class="swipe-prev" aria-label="Previous Slide">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -90,12 +110,13 @@
               stroke-linecap="round"
               stroke-linejoin="round"
               class="lucide lucide-arrow-left"
+              aria-hidden="true"
             >
               <path d="m12 19-7-7 7-7" />
               <path d="M19 12H5" />
             </svg>
           </button>
-          <button class="swipe-next">
+          <button class="swipe-next" aria-label="Next Slide">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -107,31 +128,35 @@
               stroke-linecap="round"
               stroke-linejoin="round"
               class="lucide lucide-arrow-right"
+              aria-hidden="true"
             >
               <path d="M5 12h14" />
               <path d="m12 5 7 7-7 7" />
             </svg>
           </button>
-        </div>
+        </nav>
       </section>
-      <!-- our menu cards -->
-      <section class="menu">
-        <div class="menu-tabs roboto-serif-medium-50">
-          <button class="active">Salads</button>
-          <button>Warm Bowls</button>
-          <button>Sides</button>
-        </div>
+
+      <section class="menu" aria-labelledby="menu-heading">
+        <nav
+          class="menu-tabs roboto-serif-medium-50"
+          aria-label="Menu Categories"
+        >
+          <button class="active" aria-pressed="true">Salads</button>
+          <button aria-pressed="false">Warm Bowls</button>
+          <button aria-pressed="false">Sides</button>
+        </nav>
 
         <div class="menu-cards">
-          <div class="menu-card">
-            <div class="card-image">
+          <article class="menu-card">
+            <figure class="card-image">
               <span class="popular-tag">Popular</span>
               <img
                 src="./images/bowl.png"
                 alt="Kale Caesar Salad"
                 class="food-image"
               />
-            </div>
+            </figure>
 
             <div class="card-content">
               <h3 class="food-title roboto-serif-medium-50">KALE CAESAR</h3>
@@ -152,23 +177,24 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   class="lucide lucide-arrow-right"
+                  aria-hidden="true"
                 >
                   <path d="M5 12h14" />
                   <path d="m12 5 7 7-7 7" />
                 </svg>
               </button>
             </div>
-          </div>
+          </article>
 
-          <div class="menu-card">
-            <div class="card-image">
+          <article class="menu-card">
+            <figure class="card-image">
               <span class="popular-tag">Popular</span>
               <img
                 src="./images/bowl.png"
                 alt="Kale Caesar Salad"
                 class="food-image"
               />
-            </div>
+            </figure>
 
             <div class="card-content">
               <h3 class="food-title roboto-serif-medium-50">KALE CAESAR</h3>
@@ -189,22 +215,23 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   class="lucide lucide-arrow-right"
+                  aria-hidden="true"
                 >
                   <path d="M5 12h14" />
                   <path d="m12 5 7 7-7 7" />
                 </svg>
               </button>
             </div>
-          </div>
+          </article>
 
-          <div class="menu-card">
-            <div class="card-image">
+          <article class="menu-card">
+            <figure class="card-image">
               <img
                 src="./images/bowl.png"
                 alt="Kale Caesar Salad"
                 class="food-image"
               />
-            </div>
+            </figure>
 
             <div class="card-content">
               <h3 class="food-title roboto-serif-medium-50">KALE CAESAR</h3>
@@ -225,21 +252,21 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   class="lucide lucide-arrow-right"
+                  aria-hidden="true"
                 >
                   <path d="M5 12h14" />
                   <path d="m12 5 7 7-7 7" />
                 </svg>
               </button>
             </div>
-          </div>
+          </article>
         </div>
       </section>
 
-      <!-- explore app section -->
-      <section class="explore">
-        <div class="explore-content">
-          <div class="inside-app">Inside the app</div>
-          <h1 class="roboto-serif-light-50">Explore our new sweetgreen app</h1>
+      <section class="explore" aria-labelledby="app-explore">
+        <article class="explore-content">
+          <p class="inside-app">Inside the app</p>
+          <h2 class="roboto-serif-light-50">Explore our new sweetgreen app</h2>
           <p>
             Our freshly designed app is a dream home for all things sweetgreen.
             Order delivery or pickup, find personalized promos, and access
@@ -247,7 +274,7 @@
             Tap in to eat with the seasons, explore new flavors, and find the
             sweet spot between good-for-you and just-plain-good.
           </p>
-        </div>
+        </article>
         <img
           src="./images/mobile.png"
           alt="Sweetgreen App Interface"
@@ -261,27 +288,8 @@
         <img src="./images/avocado.png" alt="avocado" class="avocado" />
       </section>
     </main>
-    <footer>
-      <!-- Slider main container -->
-    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      const swiper = new Swiper(".swiper", {
-        direction: "horizontal",
-        loop: true,
-        autoplay: {
-          delay: 10000,
-        },
-      });
-      const slider = document.querySelector(".swiper").swiper;
-      const prev = document.querySelector(".swipe-prev");
-      const next = document.querySelector(".swipe-next");
-      prev.addEventListener("click", () => {
-        slider.slidePrev();
-      });
-      next.addEventListener("click", () => {
-        slider.slideNext();
-      });
-    </script>
+    <script src="./index.js" defer></script>
   </body>
 </html>
